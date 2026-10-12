@@ -1,0 +1,1449 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NORTH &amp; STONE — Spaces With Purpose | Architecture &amp; Interiors Mumbai</title>
+    <meta name="description" content="North & Stone is an architectural practice and turnkey design atelier crafting refined residences, luxury villas, and bespoke commercial spaces in Mumbai and across India.">
+    
+    <!-- Google Fonts: Cormorant Garamond & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ivory: {
+                            DEFAULT: '#F9F8F5',
+                            subtle: '#F2EFE9',
+                            dark: '#E7E2D7'
+                        },
+                        charcoal: {
+                            DEFAULT: '#141412',
+                            light: '#232320',
+                            soft: '#33332D'
+                        },
+                        stone: {
+                            light: '#E2DED6',
+                            DEFAULT: '#CBC5B8',
+                            dark: '#A69E8F'
+                        },
+                        bronze: {
+                            light: '#B29B7E',
+                            DEFAULT: '#91795D',
+                            dark: '#6E5941'
+                        },
+                        warmline: 'rgba(20, 20, 18, 0.08)',
+                        'warmline-light': 'rgba(249, 248, 245, 0.12)'
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif']
+                    },
+                    letterSpacing: {
+                        'architectural': '0.22em',
+                        'super-wide': '0.35em'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Mobile Safe-Area Insets */
+        :root {
+            --sat: env(safe-area-inset-top, 0px);
+            --sab: env(safe-area-inset-bottom, 0px);
+        }
+
+        * {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Architectural bespoke scrollbar */
+        ::-webkit-scrollbar {
+            width: 5px;
+            height: 5px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F2EFE9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #CBC5B8;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #91795D;
+        }
+
+        ::selection {
+            background-color: #141412;
+            color: #F9F8F5;
+        }
+
+        /* Typography fluidity */
+        .editorial-hero-heading {
+            font-size: clamp(2.8rem, 8vw, 7.5rem);
+            line-height: 0.92;
+        }
+
+        .editorial-subheading {
+            font-size: clamp(2.2rem, 5vw, 4.4rem);
+            line-height: 1.02;
+        }
+
+        /* Scrolled navigation state */
+        .header-scrolled {
+            background-color: rgba(249, 248, 245, 0.94);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(20, 20, 18, 0.08);
+            box-shadow: 0 4px 20px -2px rgba(20, 20, 18, 0.03);
+        }
+
+        /* Image hover reveal subtleties */
+        .img-editorial {
+            transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), filter 0.8s ease;
+        }
+        .img-box:hover .img-editorial {
+            transform: scale(1.035);
+        }
+
+        /* Subtle grid pattern for blueprint mood */
+        .bg-blueprint {
+            background-image: 
+                linear-gradient(to right, rgba(20, 20, 18, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(20, 20, 18, 0.03) 1px, transparent 1px);
+            background-size: 32px 32px;
+        }
+
+        /* Prevent Safari zoom on form focus */
+        @media screen and (max-width: 768px) {
+            input, select, textarea {
+                font-size: 16px !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-ivory text-charcoal font-sans antialiased overflow-x-hidden selection:bg-charcoal selection:text-ivory">
+
+    <!-- NAVIGATION BAR -->
+    <header id="site-header" class="fixed top-0 left-0 right-0 z-40 transition-all duration-500 pt-[calc(1.2rem+var(--sat))] pb-4 px-6 md:px-12 flex items-center justify-between border-b border-transparent">
+        <!-- Logo -->
+        <a href="#hero" class="flex flex-col group focus:outline-none">
+            <span class="font-serif text-2xl md:text-3xl tracking-wide uppercase leading-none text-charcoal group-hover:text-bronze transition-colors">
+                NORTH &amp; STONE
+            </span>
+            <span class="text-[9px] md:text-[10px] font-sans tracking-architectural uppercase text-charcoal/60 mt-1 font-medium">
+                Architecture &amp; Interior Atelier
+            </span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center space-x-9 text-[11px] font-medium tracking-architectural uppercase text-charcoal/80">
+            <a href="#projects" class="hover:text-bronze transition-colors">Projects</a>
+            <a href="#services" class="hover:text-bronze transition-colors">Services</a>
+            <a href="#process" class="hover:text-bronze transition-colors">Process</a>
+            <a href="#materials" class="hover:text-bronze transition-colors">Materiality</a>
+            <a href="#studio" class="hover:text-bronze transition-colors">Studio</a>
+            <a href="#journal" class="hover:text-bronze transition-colors">Journal</a>
+            <a href="#contact" class="hover:text-bronze transition-colors">Contact</a>
+        </nav>
+
+        <!-- Right Action Button -->
+        <div class="hidden sm:flex items-center space-x-6">
+            <span class="text-[10px] tracking-architectural uppercase text-bronze hidden xl:inline font-mono">
+                18.9220&deg; N, 72.8347&deg; E &middot; Mumbai
+            </span>
+            <button onclick="openCommissionModal()" class="px-5 py-2.5 bg-charcoal text-ivory text-[10px] font-semibold tracking-architectural uppercase hover:bg-bronze transition-all duration-300">
+                Start A Project
+            </button>
+        </div>
+
+        <!-- Mobile Drawer Toggle -->
+        <button id="mobile-toggle" onclick="toggleMobileNav()" aria-label="Toggle navigation menu" class="lg:hidden w-12 h-12 flex items-center justify-center text-charcoal hover:text-bronze focus:outline-none -mr-2">
+            <svg id="icon-menu" class="w-6 h-6 stroke-current stroke-1" fill="none" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+            <svg id="icon-close" class="w-6 h-6 stroke-current stroke-1 hidden" fill="none" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-nav" class="fixed inset-0 z-30 bg-ivory/98 backdrop-blur-2xl flex flex-col justify-between px-8 pt-32 pb-10 transition-all duration-500 opacity-0 pointer-events-none translate-y-4 lg:hidden overflow-y-auto">
+        <div class="space-y-8">
+            <div class="text-[10px] font-mono tracking-architectural uppercase text-bronze pb-3 border-b border-warmline">
+                ATELIER PORTFOLIO &middot; INDEX
+            </div>
+            <nav class="flex flex-col space-y-5 font-serif text-3xl sm:text-4xl text-charcoal uppercase tracking-wide">
+                <a href="#projects" onclick="toggleMobileNav()" class="hover:text-bronze transition-colors">01. Selected Works</a>
+                <a href="#services" onclick="toggleMobileNav()" class="hover:text-bronze transition-colors">02. Disciplines</a>
+                <a href="#process" onclick="toggleMobileNav()" class="hover:text-bronze transition-colors">03. The Process</a>
+                <a href="#materials" onclick="toggleMobileNav()" class="hover:text-bronze transition-colors">04. Materiality</a>
+                <a href="#studio" onclick="toggleMobileNav()" class="hover:text-bronze transition-colors">05. The Studio</a>
+                <a href="#journal" onclick="toggleMobileNav()" class="hover:text-bronze transition-colors">06. Journal</a>
+                <a href="#contact" onclick="toggleMobileNav()" class="hover:text-bronze transition-colors">07. Connect</a>
+            </nav>
+        </div>
+        
+        <div class="pt-8 border-t border-warmline space-y-4">
+            <button onclick="toggleMobileNav(); openCommissionModal();" class="w-full py-4 bg-charcoal text-ivory text-xs uppercase tracking-architectural font-medium">
+                Commence Commission
+            </button>
+            <div class="flex justify-between items-center text-[10px] font-mono tracking-wider text-charcoal/60 uppercase">
+                <span>South Mumbai &middot; Alibaug &middot; Goa</span>
+                <span>+91 22 8492 7700</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 1. EDITORIAL HERO SECTION -->
+    <section id="hero" class="relative w-full min-h-screen flex items-end pb-16 md:pb-24 pt-32 px-6 md:px-12 overflow-hidden bg-charcoal text-ivory">
+        <!-- Background Imagery with slow ambient scale -->
+        <div class="absolute inset-0 z-0">
+            <img 
+                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2600&q=85" 
+                alt="North & Stone Minimalist Scandinavian Indian Residence" 
+                class="w-full h-full object-cover object-center filter brightness-[0.62] contrast-[1.08] transition-transform duration-[12s] ease-out scale-105"
+                id="hero-img"
+            />
+            <!-- Atmospheric Gradients & Texture -->
+            <div class="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/40 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-charcoal/70 via-transparent to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 w-full max-w-7xl mx-auto">
+            <!-- Location & Discipline Badge -->
+            <div class="flex items-center gap-3 mb-6">
+                <span class="w-2 h-2 rounded-full bg-bronze animate-pulse"></span>
+                <span class="text-[10px] md:text-[11px] font-mono tracking-architectural uppercase text-stone-light">
+                    MUMBAI &middot; ALIBAUG &middot; GOA &middot; RESIDENTIAL &amp; COMMERCIAL
+                </span>
+            </div>
+
+            <!-- Massive Editorial Title -->
+            <h1 class="editorial-hero-heading font-serif uppercase font-light tracking-tight max-w-5xl mb-8">
+                WE BUILD<br />
+                <span class="italic font-normal text-stone-light">SPACES THAT LAST.</span>
+            </h1>
+
+            <!-- Bottom Narrative Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-end border-t border-warmline-light pt-8 mt-6">
+                <div class="md:col-span-6 lg:col-span-5">
+                    <p class="text-sm md:text-base text-stone-light/90 font-light leading-relaxed">
+                        Architecture, bespoke interiors, and precision turnkey construction shaped around quiet luxury, natural light, and the enduring craft of stone and timber.
+                    </p>
+                </div>
+
+                <div class="md:col-span-6 lg:col-span-7 flex flex-wrap items-center justify-start md:justify-end gap-4">
+                    <button onclick="openCommissionModal()" class="px-7 py-4 bg-ivory text-charcoal text-[11px] font-medium tracking-architectural uppercase hover:bg-bronze hover:text-ivory transition-all duration-300">
+                        Start A Project
+                    </button>
+                    <a href="#projects" class="px-7 py-4 bg-transparent border border-ivory/30 text-ivory text-[11px] font-medium tracking-architectural uppercase hover:border-ivory transition-all duration-300">
+                        Explore Works &darr;
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-6 right-12 hidden lg:flex items-center gap-3 text-stone-light/60 text-[9px] font-mono tracking-widest uppercase">
+            <span>SCROLL TO EXPLORE</span>
+            <div class="w-8 h-[1px] bg-stone-light/40"></div>
+        </div>
+    </section>
+
+    <!-- 2. FEATURED PROJECT SPREAD: THE RIVER HOUSE -->
+    <section class="py-24 md:py-36 bg-ivory border-b border-warmline relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            
+            <!-- Eyebrow header -->
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 pb-6 border-b border-warmline">
+                <div>
+                    <span class="text-[10px] font-mono tracking-architectural uppercase text-bronze block mb-2">Featured Monograph &middot; 2026</span>
+                    <h2 class="editorial-subheading font-serif uppercase tracking-tight text-charcoal">The River House</h2>
+                </div>
+                <div class="text-xs text-charcoal/70 font-mono tracking-wide mt-4 md:mt-0 flex gap-6">
+                    <span>ALIBAUG, MAHARASHTRA</span>
+                    <span>&bull;</span>
+                    <span>4,800 SQ FT</span>
+                    <span>&bull;</span>
+                    <span>PRIVATE RESIDENCE</span>
+                </div>
+            </div>
+
+            <!-- Architectural Magazine Spread Layout -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+                <!-- Large Lead Photo -->
+                <div class="lg:col-span-8 group img-box relative overflow-hidden bg-stone-light aspect-[16/10] cursor-pointer" onclick="openCaseStudy('river-house')">
+                    <img 
+                        src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1800&q=85" 
+                        alt="The River House Alibaug - North and Stone" 
+                        class="w-full h-full object-cover img-editorial"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-charcoal/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="absolute bottom-6 left-6 right-6 flex justify-between items-end text-ivory opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <span class="font-serif text-2xl italic">Alibaug Estuary Villa</span>
+                        <span class="text-[10px] font-mono tracking-architectural uppercase bg-charcoal/80 px-3 py-1.5 backdrop-blur-sm">View Case Study &rarr;</span>
+                    </div>
+                </div>
+
+                <!-- Secondary Editorial Column -->
+                <div class="lg:col-span-4 flex flex-col justify-between space-y-6">
+                    <div class="space-y-4 text-charcoal/80 font-light leading-relaxed text-sm md:text-base">
+                        <p>
+                            Positioned against a slow-moving tidal river in Alibaug, The River House was envisioned as a seamless dialogue between monolithic poured-in-place board-marked concrete, natural basalt stone, and locally harvested Burma teak.
+                        </p>
+                        <p class="text-charcoal font-serif text-xl italic leading-snug border-l border-bronze pl-4 py-1">
+                            "A home that does not impose upon its landscape, but settles quietly into the humidity, breeze, and coastal sun."
+                        </p>
+                        <p class="text-xs font-mono text-charcoal/60 uppercase tracking-wider pt-2">
+                            Structural Engineer: N&amp;S Atelier &middot; Lighting: Viabizzuno &middot; Completed: February 2026
+                        </p>
+                    </div>
+
+                    <!-- Secondary Detail Photo -->
+                    <div class="img-box overflow-hidden aspect-[4/3] bg-stone-light relative cursor-pointer" onclick="openCaseStudy('river-house')">
+                        <img 
+                            src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80" 
+                            alt="The River House Living Space" 
+                            class="w-full h-full object-cover img-editorial"
+                        />
+                    </div>
+
+                    <button onclick="openCaseStudy('river-house')" class="w-full py-4 bg-charcoal text-ivory text-[11px] font-medium tracking-architectural uppercase hover:bg-bronze transition-colors flex items-center justify-center gap-3">
+                        <span>Read Architectural Case Study</span>
+                        <span>&rarr;</span>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 3. CURATED PORTFOLIO (SELECTED WORKS) -->
+    <section id="projects" class="py-24 md:py-36 bg-ivory-subtle border-b border-warmline relative">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            
+            <div class="flex flex-col md:flex-row justify-between md:items-end mb-12 sm:mb-16">
+                <div>
+                    <span class="text-[10px] font-mono tracking-architectural uppercase text-bronze block mb-2">Portfolio</span>
+                    <h2 class="editorial-subheading font-serif uppercase tracking-tight text-charcoal">Selected Works</h2>
+                </div>
+
+                <!-- Filter Controls -->
+                <div class="flex flex-wrap gap-2 sm:gap-4 mt-6 md:mt-0 text-[10px] font-mono uppercase tracking-architectural">
+                    <button onclick="filterPortfolio('all')" id="tab-all" class="portfolio-tab px-3 py-1.5 bg-charcoal text-ivory transition-colors">All Works</button>
+                    <button onclick="filterPortfolio('residential')" id="tab-residential" class="portfolio-tab px-3 py-1.5 bg-transparent text-charcoal hover:bg-stone-light transition-colors">Residential</button>
+                    <button onclick="filterPortfolio('villas')" id="tab-villas" class="portfolio-tab px-3 py-1.5 bg-transparent text-charcoal hover:bg-stone-light transition-colors">Villas</button>
+                    <button onclick="filterPortfolio('commercial')" id="tab-commercial" class="portfolio-tab px-3 py-1.5 bg-transparent text-charcoal hover:bg-stone-light transition-colors">Commercial</button>
+                </div>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12" id="portfolio-container">
+                
+                <!-- Project 1: The River House -->
+                <article class="portfolio-item group cursor-pointer" data-category="villas" onclick="openCaseStudy('river-house')">
+                    <div class="img-box relative aspect-[16/11] overflow-hidden bg-stone-light mb-5">
+                        <img 
+                            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80" 
+                            alt="The River House" 
+                            class="w-full h-full object-cover img-editorial"
+                        />
+                        <div class="absolute top-4 right-4 bg-charcoal/85 text-ivory px-2.5 py-1 text-[9px] font-mono uppercase tracking-wider">
+                            2026 &middot; Alibaug
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <span class="text-[10px] font-mono uppercase text-bronze tracking-architectural">Private Residence / Turnkey</span>
+                            <h3 class="font-serif text-2xl uppercase tracking-wide text-charcoal group-hover:text-bronze transition-colors mt-0.5">The River House</h3>
+                            <p class="text-xs text-charcoal/70 font-light mt-1.5 line-clamp-2 max-w-md">
+                                Raw basalt, fluted concrete, and internal courtyards framing coastal mangroves.
+                            </p>
+                        </div>
+                        <span class="font-serif text-xl text-charcoal group-hover:translate-x-1 transition-transform mt-2">&rarr;</span>
+                    </div>
+                </article>
+
+                <!-- Project 2: Urban Courtyard -->
+                <article class="portfolio-item group cursor-pointer" data-category="residential" onclick="openCaseStudy('urban-courtyard')">
+                    <div class="img-box relative aspect-[16/11] overflow-hidden bg-stone-light mb-5">
+                        <img 
+                            src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80" 
+                            alt="Urban Courtyard Bandra" 
+                            class="w-full h-full object-cover img-editorial"
+                        />
+                        <div class="absolute top-4 right-4 bg-charcoal/85 text-ivory px-2.5 py-1 text-[9px] font-mono uppercase tracking-wider">
+                            2025 &middot; Mumbai
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <span class="text-[10px] font-mono uppercase text-bronze tracking-architectural">Bandra Duplex / Interior Design</span>
+                            <h3 class="font-serif text-2xl uppercase tracking-wide text-charcoal group-hover:text-bronze transition-colors mt-0.5">Urban Courtyard</h3>
+                            <p class="text-xs text-charcoal/70 font-light mt-1.5 line-clamp-2 max-w-md">
+                                Scandinavian clarity paired with hand-hewn Indian sandstones and lime plaster walls.
+                            </p>
+                        </div>
+                        <span class="font-serif text-xl text-charcoal group-hover:translate-x-1 transition-transform mt-2">&rarr;</span>
+                    </div>
+                </article>
+
+                <!-- Project 3: The Cedar Villa -->
+                <article class="portfolio-item group cursor-pointer" data-category="villas" onclick="openCaseStudy('cedar-villa')">
+                    <div class="img-box relative aspect-[16/11] overflow-hidden bg-stone-light mb-5">
+                        <img 
+                            src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1200&q=80" 
+                            alt="The Cedar Villa Khandala" 
+                            class="w-full h-full object-cover img-editorial"
+                        />
+                        <div class="absolute top-4 right-4 bg-charcoal/85 text-ivory px-2.5 py-1 text-[9px] font-mono uppercase tracking-wider">
+                            2025 &middot; Khandala
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <span class="text-[10px] font-mono uppercase text-bronze tracking-architectural">Hillside Sanctuary / Architecture</span>
+                            <h3 class="font-serif text-2xl uppercase tracking-wide text-charcoal group-hover:text-bronze transition-colors mt-0.5">The Cedar Villa</h3>
+                            <p class="text-xs text-charcoal/70 font-light mt-1.5 line-clamp-2 max-w-md">
+                                Stepped cantilevered terraces overlooking Western Ghats mist, finished in cedar slats and black slate.
+                            </p>
+                        </div>
+                        <span class="font-serif text-xl text-charcoal group-hover:translate-x-1 transition-transform mt-2">&rarr;</span>
+                    </div>
+                </article>
+
+                <!-- Project 4: Monument Office -->
+                <article class="portfolio-item group cursor-pointer" data-category="commercial" onclick="openCaseStudy('monument-office')">
+                    <div class="img-box relative aspect-[16/11] overflow-hidden bg-stone-light mb-5">
+                        <img 
+                            src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80" 
+                            alt="Monument Office BKC" 
+                            class="w-full h-full object-cover img-editorial"
+                        />
+                        <div class="absolute top-4 right-4 bg-charcoal/85 text-ivory px-2.5 py-1 text-[9px] font-mono uppercase tracking-wider">
+                            2024 &middot; BKC Mumbai
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <span class="text-[10px] font-mono uppercase text-bronze tracking-architectural">Executive Headquarters / Turnkey</span>
+                            <h3 class="font-serif text-2xl uppercase tracking-wide text-charcoal group-hover:text-bronze transition-colors mt-0.5">Monument Office</h3>
+                            <p class="text-xs text-charcoal/70 font-light mt-1.5 line-clamp-2 max-w-md">
+                                Quiet private equity suite balancing smoked walnut acoustics, fluted glass, and bronze hardware.
+                            </p>
+                        </div>
+                        <span class="font-serif text-xl text-charcoal group-hover:translate-x-1 transition-transform mt-2">&rarr;</span>
+                    </div>
+                </article>
+
+                <!-- Project 5: Terracotta House -->
+                <article class="portfolio-item group cursor-pointer" data-category="residential" onclick="openCaseStudy('terracotta-house')">
+                    <div class="img-box relative aspect-[16/11] overflow-hidden bg-stone-light mb-5">
+                        <img 
+                            src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80" 
+                            alt="Terracotta House Goa" 
+                            class="w-full h-full object-cover img-editorial"
+                        />
+                        <div class="absolute top-4 right-4 bg-charcoal/85 text-ivory px-2.5 py-1 text-[9px] font-mono uppercase tracking-wider">
+                            2026 &middot; Assagao, Goa
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <span class="text-[10px] font-mono uppercase text-bronze tracking-architectural">Heritage Restoration &amp; Addition</span>
+                            <h3 class="font-serif text-2xl uppercase tracking-wide text-charcoal group-hover:text-bronze transition-colors mt-0.5">Terracotta House</h3>
+                            <p class="text-xs text-charcoal/70 font-light mt-1.5 line-clamp-2 max-w-md">
+                                Indo-Portuguese lateral walls revived with clay tiles, terrazzo floors, and airy verandas.
+                            </p>
+                        </div>
+                        <span class="font-serif text-xl text-charcoal group-hover:translate-x-1 transition-transform mt-2">&rarr;</span>
+                    </div>
+                </article>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 4. DISCIPLINES / SERVICES -->
+    <section id="services" class="py-24 md:py-36 bg-ivory border-b border-warmline relative">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            
+            <div class="max-w-3xl mb-16 md:mb-24">
+                <span class="text-[10px] font-mono tracking-architectural uppercase text-bronze block mb-2">Practice Disciplines</span>
+                <h2 class="editorial-subheading font-serif uppercase tracking-tight text-charcoal mb-6">
+                    A Holistically Unified Studio.
+                </h2>
+                <p class="text-sm md:text-base text-charcoal/80 font-light leading-relaxed">
+                    We eliminate the friction between drawing and construction. From master planning and structural calculations to the final bespoke brass cabinet pull, our architects and construction supervisors work as one entity.
+                </p>
+            </div>
+
+            <!-- Services Grid with Editorial Numbers -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+                
+                <!-- Service 1 -->
+                <div class="border-t border-charcoal/20 pt-6 space-y-4">
+                    <span class="font-mono text-xs text-bronze block">01 / ARCHITECTURE</span>
+                    <h3 class="font-serif text-2xl uppercase text-charcoal">Architectural Design</h3>
+                    <p class="text-xs md:text-sm text-charcoal/70 font-light leading-relaxed">
+                        Site analysis, passive thermal orientation, municipal approvals, spatial sequencing, and comprehensive structural planning for private residences and estates.
+                    </p>
+                    <ul class="text-[11px] font-mono text-charcoal/60 space-y-1.5 pt-2">
+                        <li>&bull; Residential Masterplanning</li>
+                        <li>&bull; Coastal &amp; Hillside Engineering</li>
+                        <li>&bull; Daylight &amp; Wind Modeling</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="border-t border-charcoal/20 pt-6 space-y-4">
+                    <span class="font-mono text-xs text-bronze block">02 / INTERIORS</span>
+                    <h3 class="font-serif text-2xl uppercase text-charcoal">Interior Architecture</h3>
+                    <p class="text-xs md:text-sm text-charcoal/70 font-light leading-relaxed">
+                        Detailed material specifications, micro-spatial planning, lighting design, acoustics, and bathroom/kitchen systems that honor quiet luxury and everyday rituals.
+                    </p>
+                    <ul class="text-[11px] font-mono text-charcoal/60 space-y-1.5 pt-2">
+                        <li>&bull; Custom Joinery &amp; Millwork</li>
+                        <li>&bull; Architectural Lighting Design</li>
+                        <li>&bull; Fine Art Curation &amp; Sourcing</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="border-t border-charcoal/20 pt-6 space-y-4">
+                    <span class="font-mono text-xs text-bronze block">03 / BUILD</span>
+                    <h3 class="font-serif text-2xl uppercase text-charcoal">Turnkey Construction</h3>
+                    <p class="text-xs md:text-sm text-charcoal/70 font-light leading-relaxed">
+                        End-to-end site execution managed by our in-house civil engineers. We take singular accountability for budget, schedule, craftsmanship, and warranties.
+                    </p>
+                    <ul class="text-[11px] font-mono text-charcoal/60 space-y-1.5 pt-2">
+                        <li>&bull; Singular Contract Accountability</li>
+                        <li>&bull; Dedicated Site Project Engineers</li>
+                        <li>&bull; Comprehensive 10-Year Structural Audit</li>
+                    </ul>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="border-t border-charcoal/20 pt-6 space-y-4">
+                    <span class="font-mono text-xs text-bronze block">04 / RESTORATION</span>
+                    <h3 class="font-serif text-2xl uppercase text-charcoal">Luxury Renovation</h3>
+                    <p class="text-xs md:text-sm text-charcoal/70 font-light leading-relaxed">
+                        Sensitive transformation of legacy colonial estates, mid-century apartments, and heritage structures with modern plumbing, HVAC, and spatial ease.
+                    </p>
+                    <ul class="text-[11px] font-mono text-charcoal/60 space-y-1.5 pt-2">
+                        <li>&bull; Structural Retrofitting</li>
+                        <li>&bull; Heritage Material Restoration</li>
+                        <li>&bull; Concealed Smart Infrastructure</li>
+                    </ul>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="border-t border-charcoal/20 pt-6 space-y-4">
+                    <span class="font-mono text-xs text-bronze block">05 / FURNITURE</span>
+                    <h3 class="font-serif text-2xl uppercase text-charcoal">Bespoke Furniture</h3>
+                    <p class="text-xs md:text-sm text-charcoal/70 font-light leading-relaxed">
+                        Handmade one-off dining tables, seating, case goods, and consoles engineered in collaboration with master carpenters in Jodhpur and Mumbai.
+                    </p>
+                    <ul class="text-[11px] font-mono text-charcoal/60 space-y-1.5 pt-2">
+                        <li>&bull; Aged Indian Teak &amp; Sissoo</li>
+                        <li>&bull; Solid Bronze Cast Elements</li>
+                        <li>&bull; Hand-stitched Saddle Leather</li>
+                    </ul>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="border-t border-charcoal/20 pt-6 space-y-4">
+                    <span class="font-mono text-xs text-bronze block">06 / MANAGEMENT</span>
+                    <h3 class="font-serif text-2xl uppercase text-charcoal">Project Governance</h3>
+                    <p class="text-xs md:text-sm text-charcoal/70 font-light leading-relaxed">
+                        Independent client representation, bill of quantities (BOQ) auditing, vendor quality control, and rigorous timeline governance for high-net-worth clients.
+                    </p>
+                    <ul class="text-[11px] font-mono text-charcoal/60 space-y-1.5 pt-2">
+                        <li>&bull; Transparent Material Procurement</li>
+                        <li>&bull; Bi-Weekly Drone &amp; Metric Reports</li>
+                        <li>&bull; Handover Operations Manuals</li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 5. OUR PROCESS TIMELINE -->
+    <section id="process" class="py-24 md:py-36 bg-charcoal text-ivory border-b border-charcoal-light relative">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            
+            <div class="flex flex-col md:flex-row justify-between md:items-end mb-16 pb-6 border-b border-charcoal-light">
+                <div>
+                    <span class="text-[10px] font-mono tracking-architectural uppercase text-bronze block mb-2">Methodology</span>
+                    <h2 class="editorial-subheading font-serif uppercase tracking-tight text-ivory">The Five Milestones</h2>
+                </div>
+                <p class="text-xs md:text-sm text-stone font-light max-w-md mt-4 md:mt-0 leading-relaxed">
+                    Every commission follows our structured architectural framework, ensuring uncompromising design integrity from blank site to keys in hand.
+                </p>
+            </div>
+
+            <!-- Steps Interactive Flow -->
+            <div class="space-y-6">
+                
+                <!-- Step 01 -->
+                <div class="group border border-charcoal-light hover:border-bronze p-6 sm:p-8 bg-charcoal-light/40 transition-all duration-300">
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-baseline">
+                        <div class="md:col-span-2 font-mono text-bronze text-sm font-semibold tracking-architectural">
+                            01 / DISCOVER
+                        </div>
+                        <div class="md:col-span-4">
+                            <h3 class="font-serif text-2xl uppercase text-ivory group-hover:text-bronze-light transition-colors">Vision, Site &amp; Lifestyle Alignment</h3>
+                        </div>
+                        <div class="md:col-span-6 text-stone text-xs md:text-sm font-light leading-relaxed">
+                            We spend days examining the soil, wind trajectory, light angles, and your familial rhythms. We establish programmatic requirements, municipal parameters, and budget guardrails.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 02 -->
+                <div class="group border border-charcoal-light hover:border-bronze p-6 sm:p-8 bg-charcoal-light/40 transition-all duration-300">
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-baseline">
+                        <div class="md:col-span-2 font-mono text-bronze text-sm font-semibold tracking-architectural">
+                            02 / CONCEPT
+                        </div>
+                        <div class="md:col-span-4">
+                            <h3 class="font-serif text-2xl uppercase text-ivory group-hover:text-bronze-light transition-colors">Volumetric Massing &amp; Spatial Flow</h3>
+                        </div>
+                        <div class="md:col-span-6 text-stone text-xs md:text-sm font-light leading-relaxed">
+                            Development of hand-sketched layouts, physical timber scale models, daylight diagrams, and spatial mood palettes to solidify the soul of the home before computer CAD begins.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 03 -->
+                <div class="group border border-charcoal-light hover:border-bronze p-6 sm:p-8 bg-charcoal-light/40 transition-all duration-300">
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-baseline">
+                        <div class="md:col-span-2 font-mono text-bronze text-sm font-semibold tracking-architectural">
+                            03 / DESIGN
+                        </div>
+                        <div class="md:col-span-4">
+                            <h3 class="font-serif text-2xl uppercase text-ivory group-hover:text-bronze-light transition-colors">Micro-Detailing, BIM &amp; Materials</h3>
+                        </div>
+                        <div class="md:col-span-6 text-stone text-xs md:text-sm font-light leading-relaxed">
+                            Millimeter-accurate working drawings, MEP coordination, 3D photorealistic lighting studies, and physical sample boards presenting stone slabs, timber finishes, and metals.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 04 -->
+                <div class="group border border-charcoal-light hover:border-bronze p-6 sm:p-8 bg-charcoal-light/40 transition-all duration-300">
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-baseline">
+                        <div class="md:col-span-2 font-mono text-bronze text-sm font-semibold tracking-architectural">
+                            04 / BUILD
+                        </div>
+                        <div class="md:col-span-4">
+                            <h3 class="font-serif text-2xl uppercase text-ivory group-hover:text-bronze-light transition-colors">Turnkey Construction &amp; Oversight</h3>
+                        </div>
+                        <div class="md:col-span-6 text-stone text-xs md:text-sm font-light leading-relaxed">
+                            Our full-time site engineers direct structural concrete pouring, masonry, waterproofing, bespoke millwork, and stone installation with weekly cloud progress audits.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 05 -->
+                <div class="group border border-charcoal-light hover:border-bronze p-6 sm:p-8 bg-charcoal-light/40 transition-all duration-300">
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-baseline">
+                        <div class="md:col-span-2 font-mono text-bronze text-sm font-semibold tracking-architectural">
+                            05 / DELIVER
+                        </div>
+                        <div class="md:col-span-4">
+                            <h3 class="font-serif text-2xl uppercase text-ivory group-hover:text-bronze-light transition-colors">Fine Commissioning &amp; Handover</h3>
+                        </div>
+                        <div class="md:col-span-6 text-stone text-xs md:text-sm font-light leading-relaxed">
+                            Snagging verification, professional architectural documentation photography, air quality balancing, furniture placement, and complete operations manuals delivered to you.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 6. ARCHITECTURAL MATERIALITY -->
+    <section id="materials" class="py-24 md:py-36 bg-ivory border-b border-warmline relative">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            
+            <div class="flex flex-col md:flex-row justify-between md:items-end mb-16 pb-6 border-b border-warmline">
+                <div>
+                    <span class="text-[10px] font-mono tracking-architectural uppercase text-bronze block mb-2">Philosophy of Substance</span>
+                    <h2 class="editorial-subheading font-serif uppercase tracking-tight text-charcoal">Honest Materiality</h2>
+                </div>
+                <p class="text-xs md:text-sm text-charcoal/70 font-light max-w-md mt-4 md:mt-0 leading-relaxed">
+                    We select materials that do not deteriorate with time; rather, they age gracefully, acquiring depth, patina, and memory.
+                </p>
+            </div>
+
+            <!-- Material Tabs / Showcase -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+                
+                <!-- Material: Stone -->
+                <div class="group bg-ivory-subtle p-5 border border-warmline hover:border-bronze transition-colors flex flex-col justify-between">
+                    <div>
+                        <div class="aspect-square overflow-hidden bg-stone-light mb-4">
+                            <img 
+                                src="https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=600&q=80" 
+                                alt="Kota & Travertine Stone" 
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                            />
+                        </div>
+                        <span class="text-[10px] font-mono text-bronze uppercase tracking-widest block mb-1">01 &middot; Earth</span>
+                        <h4 class="font-serif text-xl uppercase text-charcoal mb-2">Stone</h4>
+                        <p class="text-xs text-charcoal/70 font-light leading-relaxed">
+                            Kota brown stone, Italian silver travertine, and raw riverbed basalt selected directly from regional quarries.
+                        </p>
+                    </div>
+                    <span class="text-[9px] font-mono text-charcoal/50 uppercase tracking-widest pt-4 mt-4 border-t border-warmline">Thermal Coolness</span>
+                </div>
+
+                <!-- Material: Timber -->
+                <div class="group bg-ivory-subtle p-5 border border-warmline hover:border-bronze transition-colors flex flex-col justify-between">
+                    <div>
+                        <div class="aspect-square overflow-hidden bg-stone-light mb-4">
+                            <img 
+                                src="https://images.unsplash.com/photo-1546484396-fb3fc6f95f98?auto=format&fit=crop&w=600&q=80" 
+                                alt="Reclaimed Burma Teak Wood" 
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                            />
+                        </div>
+                        <span class="text-[10px] font-mono text-bronze uppercase tracking-widest block mb-1">02 &middot; Grain</span>
+                        <h4 class="font-serif text-xl uppercase text-charcoal mb-2">Wood</h4>
+                        <p class="text-xs text-charcoal/70 font-light leading-relaxed">
+                            Reclaimed 60-year-old Indian teak, white oak, and charred cedar treated only with biological hardwax oils.
+                        </p>
+                    </div>
+                    <span class="text-[9px] font-mono text-charcoal/50 uppercase tracking-widest pt-4 mt-4 border-t border-warmline">Tactile Warmth</span>
+                </div>
+
+                <!-- Material: Metal -->
+                <div class="group bg-ivory-subtle p-5 border border-warmline hover:border-bronze transition-colors flex flex-col justify-between">
+                    <div>
+                        <div class="aspect-square overflow-hidden bg-stone-light mb-4">
+                            <img 
+                                src="https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?auto=format&fit=crop&w=600&q=80" 
+                                alt="Patinated Bronze & Steel" 
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                            />
+                        </div>
+                        <span class="text-[10px] font-mono text-bronze uppercase tracking-widest block mb-1">03 &middot; Alloy</span>
+                        <h4 class="font-serif text-xl uppercase text-charcoal mb-2">Metal</h4>
+                        <p class="text-xs text-charcoal/70 font-light leading-relaxed">
+                            Hand-rubbed patinated bronze, blackened mild steel, and unlacquered brass hardware that reflects human touch.
+                        </p>
+                    </div>
+                    <span class="text-[9px] font-mono text-charcoal/50 uppercase tracking-widest pt-4 mt-4 border-t border-warmline">Living Patina</span>
+                </div>
+
+                <!-- Material: Glass -->
+                <div class="group bg-ivory-subtle p-5 border border-warmline hover:border-bronze transition-colors flex flex-col justify-between">
+                    <div>
+                        <div class="aspect-square overflow-hidden bg-stone-light mb-4">
+                            <img 
+                                src="https://images.unsplash.com/photo-1508873696983-2df5293cb395?auto=format&fit=crop&w=600&q=80" 
+                                alt="Fluted and Low-Iron Glass" 
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                            />
+                        </div>
+                        <span class="text-[10px] font-mono text-bronze uppercase tracking-widest block mb-1">04 &middot; Light</span>
+                        <h4 class="font-serif text-xl uppercase text-charcoal mb-2">Glass</h4>
+                        <p class="text-xs text-charcoal/70 font-light leading-relaxed">
+                            Low-iron structural glazing, acoustic fluted panels, and motorized double-glazed sliders to invite external foliage indoors.
+                        </p>
+                    </div>
+                    <span class="text-[9px] font-mono text-charcoal/50 uppercase tracking-widest pt-4 mt-4 border-t border-warmline">Diffused Daylight</span>
+                </div>
+
+                <!-- Material: Textiles -->
+                <div class="group bg-ivory-subtle p-5 border border-warmline hover:border-bronze transition-colors flex flex-col justify-between">
+                    <div>
+                        <div class="aspect-square overflow-hidden bg-stone-light mb-4">
+                            <img 
+                                src="https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?auto=format&fit=crop&w=600&q=80" 
+                                alt="Raw Indian Linen & Silk" 
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                            />
+                        </div>
+                        <span class="text-[10px] font-mono text-bronze uppercase tracking-widest block mb-1">05 &middot; Weave</span>
+                        <h4 class="font-serif text-xl uppercase text-charcoal mb-2">Textiles</h4>
+                        <p class="text-xs text-charcoal/70 font-light leading-relaxed">
+                            Handloom Belgian linens, raw Indian tussar silks, and bouclé wools custom dyed to neutral earthen pigments.
+                        </p>
+                    </div>
+                    <span class="text-[9px] font-mono text-charcoal/50 uppercase tracking-widest pt-4 mt-4 border-t border-warmline">Acoustic Serenity</span>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 7. WHY NORTH & STONE (QUANTITATIVE TRUST METRICS) -->
+    <section class="py-20 md:py-32 bg-ivory-subtle border-b border-warmline bg-blueprint">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 text-center md:text-left">
+                <div class="border-t border-charcoal/30 pt-6">
+                    <div class="font-serif text-5xl md:text-6xl text-charcoal font-light">25+</div>
+                    <div class="text-[10px] md:text-[11px] font-mono tracking-architectural uppercase text-bronze mt-2">Completed Residences</div>
+                    <p class="text-xs text-charcoal/60 mt-1 font-light">From Mumbai penthouse lofts to standalone coastal estates.</p>
+                </div>
+
+                <div class="border-t border-charcoal/30 pt-6">
+                    <div class="font-serif text-5xl md:text-6xl text-charcoal font-light">8+</div>
+                    <div class="text-[10px] md:text-[11px] font-mono tracking-architectural uppercase text-bronze mt-2">Years of Practice</div>
+                    <p class="text-xs text-charcoal/60 mt-1 font-light">Continuous research into tropical Scandinavian architecture.</p>
+                </div>
+
+                <div class="border-t border-charcoal/30 pt-6">
+                    <div class="font-serif text-5xl md:text-6xl text-charcoal font-light">120K+</div>
+                    <div class="text-[10px] md:text-[11px] font-mono tracking-architectural uppercase text-bronze mt-2">Sq Ft Built</div>
+                    <p class="text-xs text-charcoal/60 mt-1 font-light">Engineered with millimeter-grade construction tolerance.</p>
+                </div>
+
+                <div class="border-t border-charcoal/30 pt-6">
+                    <div class="font-serif text-5xl md:text-6xl text-charcoal font-light">97%</div>
+                    <div class="text-[10px] md:text-[11px] font-mono tracking-architectural uppercase text-bronze mt-2">Client Referrals</div>
+                    <p class="text-xs text-charcoal/60 mt-1 font-light">Rooted in transparent fiscal billing and schedule fidelity.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 8. CLIENT PERSPECTIVES / TESTIMONIALS -->
+    <section class="py-24 md:py-36 bg-ivory border-b border-warmline relative">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            
+            <div class="max-w-xl mb-16">
+                <span class="text-[10px] font-mono tracking-architectural uppercase text-bronze block mb-2">Client Reflections</span>
+                <h2 class="editorial-subheading font-serif uppercase tracking-tight text-charcoal">Considered Living</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+                
+                <!-- Testimonial 1 -->
+                <div class="p-8 bg-ivory-subtle border border-warmline flex flex-col justify-between">
+                    <p class="font-serif text-lg md:text-xl text-charcoal font-light italic leading-relaxed mb-6">
+                        "From the first soil inspection in Alibaug to the moment we opened our front door, North &amp; Stone brought a quiet rigor we rarely witness in Indian construction. They protected our budget while building an architectural triumph."
+                    </p>
+                    <div class="pt-4 border-t border-warmline">
+                        <span class="font-serif text-base uppercase text-charcoal block">Ananya &amp; Rahul Singhania</span>
+                        <span class="text-[10px] font-mono text-bronze uppercase tracking-widest">The River House &middot; Alibaug</span>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="p-8 bg-ivory-subtle border border-warmline flex flex-col justify-between">
+                    <p class="font-serif text-lg md:text-xl text-charcoal font-light italic leading-relaxed mb-6">
+                        "They completely reconsidered how natural daylight moved across our Bandra duplex. The transition between lime plaster and reclaimed teak creates a calm that insulates us completely from the city's chaos."
+                    </p>
+                    <div class="pt-4 border-t border-warmline">
+                        <span class="font-serif text-base uppercase text-charcoal block">Dr. Kabir &amp; Mira Sen</span>
+                        <span class="text-[10px] font-mono text-bronze uppercase tracking-widest">Urban Courtyard &middot; Bandra, Mumbai</span>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="p-8 bg-ivory-subtle border border-warmline flex flex-col justify-between">
+                    <p class="font-serif text-lg md:text-xl text-charcoal font-light italic leading-relaxed mb-6">
+                        "Designing our private equity headquarters required extreme privacy, acoustic separation, and refined elegance. North &amp; Stone delivered the turnkey handover two weeks ahead of schedule."
+                    </p>
+                    <div class="pt-4 border-t border-warmline">
+                        <span class="font-serif text-base uppercase text-charcoal block">Vikramaditya Mehta</span>
+                        <span class="text-[10px] font-mono text-bronze uppercase tracking-widest">Monument Office &middot; BKC, Mumbai</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 9. THE STUDIO & JOURNAL -->
+    <section id="studio" class="py-24 md:py-36 bg-ivory-subtle border-b border-warmline">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-24">
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-[10px] font-mono tracking-architectural uppercase text-bronze block">The Practice</span>
+                    <h2 class="editorial-subheading font-serif uppercase tracking-tight text-charcoal">
+                        Rooted in Mumbai.<br />
+                        <span class="italic font-normal">Building for Generations.</span>
+                    </h2>
+                    <p class="text-sm md:text-base text-charcoal/80 font-light leading-relaxed">
+                        Founded by architects and civil engineers who trained in Copenhagen and Mumbai, North &amp; Stone bridges two worlds: Scandinavian clarity, spatial proportion, and functional daylight alongside India’s profound vernacular masonry, monsoon engineering, and artisanal woodworking traditions.
+                    </p>
+                    <div class="pt-4 flex gap-8 text-xs font-mono text-charcoal/70 uppercase">
+                        <div>
+                            <span class="text-bronze block font-semibold">STUDIO LOCATION</span>
+                            <span>Ballard Estate, Fort, Mumbai</span>
+                        </div>
+                        <div>
+                            <span class="text-bronze block font-semibold">PRACTICE RADIUS</span>
+                            <span>Maharashtra &bull; Goa &bull; NCR</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6 aspect-[4/3] overflow-hidden bg-stone-light border border-warmline">
+                    <img 
+                        src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=80" 
+                        alt="North & Stone Architecture Studio Fort Mumbai" 
+                        class="w-full h-full object-cover img-editorial"
+                    />
+                </div>
+            </div>
+
+            <!-- Journal Articles -->
+            <div id="journal" class="pt-12 border-t border-warmline">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12">
+                    <div>
+                        <span class="text-[10px] font-mono tracking-architectural uppercase text-bronze block mb-1">Publications &middot; Monograph</span>
+                        <h3 class="font-serif text-3xl uppercase tracking-wide text-charcoal">The Studio Journal</h3>
+                    </div>
+                    <span class="text-xs font-mono text-charcoal/60 uppercase tracking-widest mt-2 md:mt-0">Reflections on Architecture</span>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    
+                    <article class="group cursor-pointer">
+                        <div class="aspect-[16/10] overflow-hidden bg-stone-light mb-4">
+                            <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&q=80" alt="Designing for Natural Light" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <span class="text-[10px] font-mono text-bronze uppercase tracking-widest">Essay &middot; Light &amp; Air</span>
+                        <h4 class="font-serif text-xl uppercase text-charcoal mt-1 group-hover:text-bronze transition-colors">Designing Homes Around Tropical Sunlight</h4>
+                        <p class="text-xs text-charcoal/70 font-light mt-1.5 leading-relaxed">
+                            How recessed verandas and orientation cut radiant heat while illuminating interior concrete surfaces.
+                        </p>
+                    </article>
+
+                    <article class="group cursor-pointer">
+                        <div class="aspect-[16/10] overflow-hidden bg-stone-light mb-4">
+                            <img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=800&q=80" alt="5 Materials That Age Beautifully" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <span class="text-[10px] font-mono text-bronze uppercase tracking-widest">Materiality &middot; Craft</span>
+                        <h4 class="font-serif text-xl uppercase text-charcoal mt-1 group-hover:text-bronze transition-colors">Five Natural Materials That Age With Dignity</h4>
+                        <p class="text-xs text-charcoal/70 font-light mt-1.5 leading-relaxed">
+                            Why Kota stone, teak, and unlacquered bronze increase in value and beauty over decades of human use.
+                        </p>
+                    </article>
+
+                    <article class="group cursor-pointer">
+                        <div class="aspect-[16/10] overflow-hidden bg-stone-light mb-4">
+                            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80" alt="Quiet Luxury Interiors" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <span class="text-[10px] font-mono text-bronze uppercase tracking-widest">Philosophy &middot; Living</span>
+                        <h4 class="font-serif text-xl uppercase text-charcoal mt-1 group-hover:text-bronze transition-colors">The Architecture of Quiet Luxury</h4>
+                        <p class="text-xs text-charcoal/70 font-light mt-1.5 leading-relaxed">
+                            Moving away from ostentatious ornamentation toward generous proportions, tactile depth, and serenity.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 10. PROJECT COMMISSIONING ENQUIRY -->
+    <section id="contact" class="py-24 md:py-36 bg-ivory border-b border-warmline relative">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+                <!-- Left Narrative -->
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-[10px] font-mono tracking-architectural uppercase text-bronze block">Initiate Dialogue</span>
+                    <h2 class="editorial-subheading font-serif uppercase tracking-tight text-charcoal">
+                        Let's Build Something<br />
+                        <span class="italic font-normal">Worth Keeping.</span>
+                    </h2>
+                    <p class="text-sm md:text-base text-charcoal/80 font-light leading-relaxed">
+                        We accept a deliberately limited number of architectural commissions each fiscal year to ensure our partners personally supervise every phase of design and execution.
+                    </p>
+
+                    <div class="space-y-4 pt-6 border-t border-warmline text-xs font-mono text-charcoal/80">
+                        <div class="flex items-center gap-3">
+                            <span class="w-2 h-2 rounded-full bg-bronze"></span>
+                            <span>Direct Studio Phone: <a href="tel:+912284927700" class="hover:text-bronze underline">+91 (022) 8492 7700</a></span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="w-2 h-2 rounded-full bg-bronze"></span>
+                            <span>WhatsApp Atelier: <a href="https://wa.me/912284927700" target="_blank" rel="noopener" class="hover:text-bronze underline">+91 22 8492 7700</a></span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="w-2 h-2 rounded-full bg-bronze"></span>
+                            <span>Commissions Desk: <a href="mailto:atelier@northandstone.in" class="hover:text-bronze underline">atelier@northandstone.in</a></span>
+                        </div>
+                    </div>
+
+                    <div class="p-6 bg-ivory-subtle border border-warmline text-xs font-mono text-charcoal/70">
+                        <span class="text-bronze uppercase tracking-widest block font-semibold mb-1">STUDIO VISITS BY APPOINTMENT</span>
+                        <p class="leading-relaxed">
+                            Suite 402, Calicut House, Ballard Estate,<br />
+                            Fort, Mumbai, Maharashtra 400001
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right Commission Form -->
+                <div class="lg:col-span-7 bg-ivory-subtle p-8 md:p-12 border border-warmline">
+                    <form id="project-form" onsubmit="handleInquirySubmit(event)" class="space-y-6">
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label for="inq-name" class="block text-[10px] font-mono uppercase tracking-architectural text-charcoal/70 mb-2">Your Name *</label>
+                                <input type="text" id="inq-name" required placeholder="Kabir Mehta" class="w-full bg-ivory border border-warmline px-4 py-3 text-sm font-sans text-charcoal focus:outline-none focus:border-charcoal placeholder:text-charcoal/30">
+                            </div>
+                            <div>
+                                <label for="inq-phone" class="block text-[10px] font-mono uppercase tracking-architectural text-charcoal/70 mb-2">Mobile Phone *</label>
+                                <input type="tel" id="inq-phone" required placeholder="+91 98200..." class="w-full bg-ivory border border-warmline px-4 py-3 text-sm font-sans text-charcoal focus:outline-none focus:border-charcoal placeholder:text-charcoal/30">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="inq-email" class="block text-[10px] font-mono uppercase tracking-architectural text-charcoal/70 mb-2">Email Address *</label>
+                            <input type="email" id="inq-email" required placeholder="kabir@mehta.com" class="w-full bg-ivory border border-warmline px-4 py-3 text-sm font-sans text-charcoal focus:outline-none focus:border-charcoal placeholder:text-charcoal/30">
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label for="inq-type" class="block text-[10px] font-mono uppercase tracking-architectural text-charcoal/70 mb-2">Project Classification</label>
+                                <select id="inq-type" class="w-full bg-ivory border border-warmline px-4 py-3 text-sm font-sans text-charcoal focus:outline-none focus:border-charcoal">
+                                    <option value="New Architecture & Turnkey Construction">New Architecture &amp; Construction</option>
+                                    <option value="Luxury Villa / Holiday Home">Luxury Villa (Alibaug / Goa / Hills)</option>
+                                    <option value="Bespoke Residential Interior">High-End Apartment Interior</option>
+                                    <option value="Complete Heritage Renovation">Heritage Restoration</option>
+                                    <option value="Corporate / Boutique Commercial">Boutique Commercial / HQ</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="inq-budget" class="block text-[10px] font-mono uppercase tracking-architectural text-charcoal/70 mb-2">Anticipated Investment</label>
+                                <select id="inq-budget" class="w-full bg-ivory border border-warmline px-4 py-3 text-sm font-sans text-charcoal focus:outline-none focus:border-charcoal">
+                                    <option value="₹75 Lakhs – ₹1.5 Crores">₹75 Lakhs – ₹1.5 Crores</option>
+                                    <option value="₹1.5 Crores – ₹3.5 Crores">₹1.5 Crores – ₹3.5 Crores</option>
+                                    <option value="₹3.5 Crores – ₹8.0 Crores">₹3.5 Crores – ₹8.0 Crores</option>
+                                    <option value="₹8.0 Crores + (Estates & Commercial)">₹8.0 Crores + (Estates / HQs)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="inq-location" class="block text-[10px] font-mono uppercase tracking-architectural text-charcoal/70 mb-2">Project Site Location</label>
+                            <input type="text" id="inq-location" placeholder="e.g. Awas, Alibaug / Worli Sea Face, Mumbai" class="w-full bg-ivory border border-warmline px-4 py-3 text-sm font-sans text-charcoal focus:outline-none focus:border-charcoal placeholder:text-charcoal/30">
+                        </div>
+
+                        <div>
+                            <label for="inq-notes" class="block text-[10px] font-mono uppercase tracking-architectural text-charcoal/70 mb-2">Brief &amp; Spatial Aspirations</label>
+                            <textarea id="inq-notes" rows="3" placeholder="Tell us about the property, square footage, timeline, and what you wish to create..." class="w-full bg-ivory border border-warmline px-4 py-3 text-sm font-sans text-charcoal focus:outline-none focus:border-charcoal placeholder:text-charcoal/30"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-4 bg-charcoal text-ivory text-xs font-semibold tracking-architectural uppercase hover:bg-bronze transition-colors">
+                            Start The Conversation &rarr;
+                        </button>
+                        
+                        <p class="text-[10px] font-mono text-charcoal/50 text-center uppercase tracking-wider">
+                            Guaranteed privacy &middot; Non-disclosure agreement upon request
+                        </p>
+                    </form>
+
+                    <!-- Success State Notice -->
+                    <div id="form-success" class="hidden text-center py-12 space-y-4">
+                        <div class="w-12 h-12 mx-auto rounded-full bg-bronze/10 text-bronze flex items-center justify-center font-serif text-2xl font-bold">
+                            &check;
+                        </div>
+                        <h4 class="font-serif text-2xl uppercase text-charcoal">Commission Brief Received</h4>
+                        <p class="text-xs text-charcoal/70 font-light max-w-md mx-auto leading-relaxed font-sans">
+                            Thank you for placing your trust in North &amp; Stone. Our managing architect will review your project parameters and reach out within 24 business hours to arrange an introductory consultation.
+                        </p>
+                        <div class="pt-4 font-mono text-[11px] text-bronze uppercase tracking-widest">
+                            Ref Code: <span id="ref-code">NS-2026-089</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 11. FOOTER -->
+    <footer class="bg-charcoal text-stone-light pt-20 pb-12 px-6 md:px-12 border-t border-charcoal-light">
+        <div class="max-w-7xl mx-auto">
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-12 mb-16 pb-16 border-b border-charcoal-light">
+                
+                <!-- Brand col -->
+                <div class="sm:col-span-2 space-y-4">
+                    <span class="font-serif text-3xl uppercase tracking-wide text-ivory block">NORTH &amp; STONE</span>
+                    <p class="text-[10px] font-mono uppercase tracking-architectural text-bronze">
+                        SPACES WITH PURPOSE.
+                    </p>
+                    <p class="text-xs text-stone font-light leading-relaxed max-w-sm">
+                        An integrated architecture, interior design, and turnkey construction practice crafting spaces that endure through quiet proportion and material honesty.
+                    </p>
+                </div>
+
+                <!-- Navigation -->
+                <div>
+                    <span class="text-[10px] font-mono uppercase tracking-architectural text-bronze block mb-4">Practice</span>
+                    <ul class="space-y-2.5 text-xs text-stone font-light">
+                        <li><a href="#projects" class="hover:text-ivory transition-colors">Selected Projects</a></li>
+                        <li><a href="#services" class="hover:text-ivory transition-colors">Disciplines &amp; Scope</a></li>
+                        <li><a href="#process" class="hover:text-ivory transition-colors">The 5-Step Process</a></li>
+                        <li><a href="#materials" class="hover:text-ivory transition-colors">Honest Materiality</a></li>
+                        <li><a href="#studio" class="hover:text-ivory transition-colors">Studio Manifesto</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact & Lines -->
+                <div>
+                    <span class="text-[10px] font-mono uppercase tracking-architectural text-bronze block mb-4">Atelier Desk</span>
+                    <ul class="space-y-2.5 text-xs font-mono text-stone">
+                        <li><a href="tel:+912284927700" class="hover:text-ivory transition-colors">+91 (022) 8492 7700</a></li>
+                        <li><a href="https://wa.me/912284927700" target="_blank" rel="noopener" class="hover:text-ivory transition-colors">WhatsApp Studio</a></li>
+                        <li><a href="mailto:atelier@northandstone.in" class="hover:text-ivory transition-colors">atelier@northandstone.in</a></li>
+                        <li><a href="https://instagram.com" target="_blank" rel="noopener" class="hover:text-ivory transition-colors">Instagram &middot; @northandstone</a></li>
+                    </ul>
+                </div>
+
+                <!-- Locations -->
+                <div>
+                    <span class="text-[10px] font-mono uppercase tracking-architectural text-bronze block mb-4">Location &middot; Coordinates</span>
+                    <p class="text-xs text-stone font-light leading-relaxed">
+                        Ballard Estate, Fort,<br />
+                        South Mumbai 400001<br />
+                        Maharashtra, India
+                    </p>
+                    <span class="text-[10px] font-mono text-bronze uppercase block mt-2">18.9220&deg; N, 72.8347&deg; E</span>
+                </div>
+
+            </div>
+
+            <!-- Bottom Sub-Footer -->
+            <div class="flex flex-col sm:flex-row items-center justify-between text-[11px] font-mono text-stone/60">
+                <p>&copy; 2026 NORTH &amp; STONE ATELIER PVT. LTD. ALL RIGHTS RESERVED.</p>
+                <div class="flex space-x-6 mt-4 sm:mt-0">
+                    <a href="#hero" class="hover:text-ivory transition-colors">PRACTICE CHARTER</a>
+                    <a href="#hero" class="hover:text-ivory transition-colors">PRIVACY CODE</a>
+                    <a href="#hero" class="hover:text-ivory transition-colors">DISCLAIMER</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- CASE STUDY MODAL -->
+    <div id="modal-backdrop" class="fixed inset-0 z-50 bg-charcoal/80 backdrop-blur-md transition-opacity duration-300 opacity-0 pointer-events-none" onclick="closeCaseStudy()"></div>
+
+    <div id="case-study-modal" class="fixed inset-y-0 right-0 z-50 w-full max-w-4xl bg-ivory text-charcoal shadow-2xl transition-transform duration-500 transform translate-x-full overflow-y-auto">
+        <div class="p-6 sm:p-10 md:p-14">
+            
+            <!-- Modal Header Bar -->
+            <div class="flex items-center justify-between border-b border-warmline pb-6 mb-8">
+                <div>
+                    <span class="text-[10px] font-mono tracking-architectural uppercase text-bronze" id="cs-category">VILLA &middot; PRIVATE RESIDENCE</span>
+                    <h3 class="font-serif text-3xl sm:text-4xl uppercase text-charcoal mt-1" id="cs-title">The River House</h3>
+                </div>
+                <button onclick="closeCaseStudy()" aria-label="Close Case Study" class="w-10 h-10 flex items-center justify-center border border-warmline hover:border-charcoal transition-colors">
+                    <svg class="w-5 h-5 stroke-current stroke-1" fill="none" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Architectural Specs Bar -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 p-4 bg-ivory-subtle border border-warmline mb-8 font-mono text-xs">
+                <div>
+                    <span class="text-[9px] text-charcoal/50 block">LOCATION</span>
+                    <span class="font-medium" id="cs-location">Alibaug, Maharashtra</span>
+                </div>
+                <div>
+                    <span class="text-[9px] text-charcoal/50 block">BUILT AREA</span>
+                    <span class="font-medium" id="cs-area">4,800 sq ft</span>
+                </div>
+                <div>
+                    <span class="text-[9px] text-charcoal/50 block">SCOPE</span>
+                    <span class="font-medium" id="cs-scope">Architecture &amp; Turnkey</span>
+                </div>
+                <div>
+                    <span class="text-[9px] text-charcoal/50 block">COMPLETION</span>
+                    <span class="font-medium" id="cs-year">2026</span>
+                </div>
+            </div>
+
+            <!-- Main High-Res Image Display -->
+            <div class="aspect-[16/9] overflow-hidden bg-stone-light mb-8 border border-warmline">
+                <img id="cs-image-main" src="" alt="Case study main view" class="w-full h-full object-cover">
+            </div>
+
+            <!-- Narrative Paragraphs -->
+            <div class="space-y-4 text-sm md:text-base font-light text-charcoal/85 leading-relaxed mb-8" id="cs-narrative">
+                <!-- Injected dynamically via JS -->
+            </div>
+
+            <!-- Materiality Grid In Modal -->
+            <div class="border-t border-warmline pt-6 mb-8">
+                <span class="text-[10px] font-mono tracking-architectural uppercase text-bronze block mb-3">Specification Palette</span>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4" id="cs-materials-grid">
+                    <!-- Injected dynamically -->
+                </div>
+            </div>
+
+            <!-- Action Prompt -->
+            <div class="p-6 bg-charcoal text-ivory flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div>
+                    <span class="font-serif text-xl block">Envisioning a similar space?</span>
+                    <span class="text-[10px] font-mono text-stone-light">Discuss your plot or apartment with our design partners.</span>
+                </div>
+                <button onclick="closeCaseStudy(); openCommissionModal();" class="px-6 py-3 bg-ivory text-charcoal text-[10px] font-mono uppercase tracking-architectural hover:bg-bronze hover:text-ivory transition-colors whitespace-nowrap">
+                    Inquire For Your Plot
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        // Project Database for Case Study Modal
+        const projectsData = {
+            'river-house': {
+                title: 'The River House',
+                category: 'PRIVATE RESIDENCE &middot; TURNKEY CONSTRUCTION',
+                location: 'Alibaug, Maharashtra',
+                area: '4,800 sq ft',
+                scope: 'Architecture & Construction',
+                year: '2026',
+                mainImg: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1600&q=85',
+                narrative: `
+                    <p>Designed as a tranquil sanctuary fronting the mangrove estuaries of Alibaug, The River House embraces passive ventilation and tropical brutalism. Board-marked concrete forms deep exterior canopies that shade expansive full-height glazing from harsh maritime sunlight.</p>
+                    <p>Internally, raw local basalt floors maintain cool ambient foot temperatures even in summer. An open-to-sky internal atrium encourages vertical air convection, drawing cool breezes across the river water into living quarters without continuous dependency on artificial air conditioning.</p>
+                `,
+                materials: [
+                    { name: 'Board-Marked Concrete', desc: 'Poured on site with silver fir boards' },
+                    { name: 'Alibaug Basalt Stone', desc: 'Hand-chiselled dry stone retaining walls' },
+                    { name: 'Reclaimed Burma Teak', desc: 'Deep eaves and bespoke louvers' }
+                ]
+            },
+            'urban-courtyard': {
+                title: 'Urban Courtyard',
+                category: 'APARTMENT INTERIORS &middot; MILLWORK',
+                location: 'Bandra West, Mumbai',
+                area: '2,900 sq ft',
+                scope: 'Interior Architecture',
+                year: '2025',
+                mainImg: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1600&q=85',
+                narrative: `
+                    <p>A duplex apartment in Bandra overhauled to feel like a Scandinavian cloister amidst dense urban Mumbai. Partitions were dismantled to create a central double-height light well finished in tactile lime-wash plaster.</p>
+                    <p>Minimalist joinery hides air supply diffusers, storage, and home automation systems behind flush fluted wood panels. Furnishings are sculptural, anchored by hand-spun wool carpets and solid travertine coffee tables.</p>
+                `,
+                materials: [
+                    { name: 'Off-White Lime Plaster', desc: 'Hand-trowelled breathable mineral coat' },
+                    { name: 'Italian Silver Travertine', desc: 'Unfilled honed slabs in wet areas' },
+                    { name: 'Smoked White Oak', desc: 'Continuous grain continuous plank joinery' }
+                ]
+            },
+            'cedar-villa': {
+                title: 'The Cedar Villa',
+                category: 'HILLSIDE SANCTUARY &middot; ARCHITECTURE',
+                location: 'Khandala, Maharashtra',
+                area: '6,200 sq ft',
+                scope: 'Architecture & Interiors',
+                year: '2025',
+                mainImg: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1600&q=85',
+                narrative: `
+                    <p>Stepped down a steep 35-degree rocky incline in Khandala, The Cedar Villa commands uninhibited vistas across the Western Ghats ravines. The home consists of three stacked cantilevered pavilions that hover lightly over the hillside contour.</p>
+                    <p>Exterior cladding combines charred Japanese Shou Sugi Ban cedar with Indian black slate. Deep infinity water retention ponds mirror mountain fog while helping passively cool the lower sleeping pavilions.</p>
+                `,
+                materials: [
+                    { name: 'Charred Cedar Wood', desc: 'Traditional flame-preserved weather shield' },
+                    { name: 'Kund Black Slate', desc: 'Split-face vertical stone cladding' },
+                    { name: 'Low-Iron Structural Glass', desc: 'Floor-to-ceiling thermal panels' }
+                ]
+            },
+            'monument-office': {
+                title: 'Monument Office',
+                category: 'COMMERCIAL SUITE &middot; EXECUTIVE HQ',
+                location: 'BKC, Mumbai',
+                area: '5,500 sq ft',
+                scope: 'Turnkey Workplace Interior',
+                year: '2024',
+                mainImg: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=85',
+                narrative: `
+                    <p>Conceived for an international investment boutique in BKC, Monument Office swaps fluorescent corporate cubicles for residential calm, museum-grade art displays, and acoustic perfection.</p>
+                    <p>Private boardrooms feature double-glazed acoustic partitions framed in patinated unlacquered bronze and wall panels draped in Scottish woven wool. The client lounge features a custom floating marble bar and panoramic views.</p>
+                `,
+                materials: [
+                    { name: 'Unlacquered Patina Bronze', desc: 'Custom mullions and door hardware' },
+                    { name: 'Acoustic Woven Wool', desc: 'Sound-dampening wall upholstery' },
+                    { name: 'Saint Laurent Marble', desc: 'Bookmatched dark polished stone' }
+                ]
+            },
+            'terracotta-house': {
+                title: 'Terracotta House',
+                category: 'HERITAGE RESTORATION &middot; RESIDENTIAL',
+                location: 'Assagao, Goa',
+                area: '3,800 sq ft',
+                scope: 'Restoration & Contemporary Wing',
+                year: '2026',
+                mainImg: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=85',
+                narrative: `
+                    <p>A sensitive intervention within a 19th-century Indo-Portuguese courtyard home in Assagao. While the historic laterite stone shell was structurally stabilized, a modern pavilion was connected via an open glass-walled bridge.</p>
+                    <p>Clay roof tiles, custom terrazzo floor patterns, and brass window hardware harmonize the vintage core with contemporary living expectations.</p>
+                `,
+                materials: [
+                    { name: 'Hand-Cast Terrazzo', desc: 'Custom earthen mineral aggregate blend' },
+                    { name: 'Goan Laterite Stone', desc: 'Exposed lime-stabilized masonry' },
+                    { name: 'Aged Teak Beams', desc: 'Salvaged and remilled structural rafters' }
+                ]
+            }
+        };
+
+        // Header Scroll Blur Logic
+        const siteHeader = document.getElementById('site-header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 40) {
+                siteHeader.classList.add('header-scrolled');
+            } else {
+                siteHeader.classList.remove('header-scrolled');
+            }
+        });
+
+        // Mobile Nav Drawer Toggle
+        let isMobileNavOpen = false;
+        const mobileNav = document.getElementById('mobile-nav');
+        const iconMenu = document.getElementById('icon-menu');
+        const iconClose = document.getElementById('icon-close');
+
+        function toggleMobileNav() {
+            isMobileNavOpen = !isMobileNavOpen;
+            if (isMobileNavOpen) {
+                mobileNav.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
+                mobileNav.classList.add('opacity-100', 'pointer-events-auto', 'translate-y-0');
+                iconMenu.classList.add('hidden');
+                iconClose.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            } else {
+                mobileNav.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
+                mobileNav.classList.remove('opacity-100', 'pointer-events-auto', 'translate-y-0');
+                iconMenu.classList.remove('hidden');
+                iconClose.classList.add('hidden');
+                document.body.style.overflow = '';
+            }
+        }
+
+        // Portfolio Category Filter
+        function filterPortfolio(category) {
+            const items = document.querySelectorAll('.portfolio-item');
+            const tabs = document.querySelectorAll('.portfolio-tab');
+
+            tabs.forEach(tab => {
+                tab.classList.remove('bg-charcoal', 'text-ivory');
+                tab.classList.add('bg-transparent', 'text-charcoal');
+            });
+
+            const activeTab = document.getElementById(`tab-${category}`);
+            if (activeTab) {
+                activeTab.classList.remove('bg-transparent', 'text-charcoal');
+                activeTab.classList.add('bg-charcoal', 'text-ivory');
+            }
+
+            items.forEach(item => {
+                if (category === 'all' || item.dataset.category === category) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // Case Study Modal Logic
+        const modalBackdrop = document.getElementById('modal-backdrop');
+        const caseStudyModal = document.getElementById('case-study-modal');
+
+        function openCaseStudy(projectId) {
+            const project = projectsData[projectId];
+            if (!project) return;
+
+            document.getElementById('cs-title').textContent = project.title;
+            document.getElementById('cs-category').innerHTML = project.category;
+            document.getElementById('cs-location').textContent = project.location;
+            document.getElementById('cs-area').textContent = project.area;
+            document.getElementById('cs-scope').innerHTML = project.scope;
+            document.getElementById('cs-year').textContent = project.year;
+            document.getElementById('cs-image-main').src = project.mainImg;
+            document.getElementById('cs-narrative').innerHTML = project.narrative;
+
+            const matGrid = document.getElementById('cs-materials-grid');
+            matGrid.innerHTML = '';
+            project.materials.forEach(mat => {
+                matGrid.innerHTML += `
+                    <div class="p-3 bg-ivory border border-warmline text-xs">
+                        <span class="font-medium text-charcoal block">${mat.name}</span>
+                        <span class="text-[10px] text-charcoal/60 block mt-0.5">${mat.desc}</span>
+                    </div>
+                `;
+            });
+
+            modalBackdrop.classList.remove('opacity-0', 'pointer-events-none');
+            modalBackdrop.classList.add('opacity-100', 'pointer-events-auto');
+            caseStudyModal.classList.remove('translate-x-full');
+            caseStudyModal.classList.add('translate-x-0');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeCaseStudy() {
+            modalBackdrop.classList.add('opacity-0', 'pointer-events-none');
+            modalBackdrop.classList.remove('opacity-100', 'pointer-events-auto');
+            caseStudyModal.classList.add('translate-x-full');
+            caseStudyModal.classList.remove('translate-x-0');
+            document.body.style.overflow = '';
+        }
+
+        function openCommissionModal() {
+            // Smoothly scroll down to contact section or focus enquiry
+            const contactSection = document.getElementById('contact');
+            if (contactSection) {
+                contactSection.scrollIntoView({ behavior: 'smooth' });
+                setTimeout(() => {
+                    document.getElementById('inq-name').focus();
+                }, 600);
+            }
+        }
+
+        // Enquiry Form Submission Handler
+        function handleInquirySubmit(e) {
+            e.preventDefault();
+            const clientName = document.getElementById('inq-name').value;
+            const refCode = 'NS-2026-' + Math.floor(100 + Math.random() * 900);
+            
+            document.getElementById('ref-code').textContent = refCode;
+            document.getElementById('project-form').classList.add('hidden');
+            document.getElementById('form-success').classList.remove('hidden');
+        }
+
+        // Keyboard accessibility
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                if (isMobileNavOpen) toggleMobileNav();
+                closeCaseStudy();
+            }
+        });
+    </script>
+</body>
+</html>
